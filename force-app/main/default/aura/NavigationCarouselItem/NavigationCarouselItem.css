@@ -1,0 +1,43 @@
+.THIS {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.THIS:nth-last-child(2) {
+    margin-right: 0;
+}
+
+.THIS .carouselitem {
+    text-align: center;
+    display: inline-block;
+}
+
+.THIS .carouselitem:hover {
+    text-decoration: none;
+}
+
+.THIS .item-topictext {
+    font-size: 0.9rem;
+    color: #16325c;
+    font-weight: 300;
+    display: block;
+    line-height: 1.5;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    margin-top: 8px;
+}
+
+.THIS:hover .item-topictext {
+    color: #808CDD;
+    text-decoration: none;
+}
+
+.THIS:focus .item-topictext {
+    text-decoration: none;
+}
+
+.THIS .slds-assistive-text {
+    display: inline;
+}

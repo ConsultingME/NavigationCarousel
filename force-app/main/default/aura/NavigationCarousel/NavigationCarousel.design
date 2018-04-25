@@ -1,0 +1,6 @@
+<design:component label="CME Navigation Carousel">
+	    <design:attribute name="carouselName" label="Carousel Name" description="Name of the Navigation Carousel record" />
+	    <design:attribute name="sldsResourceName" label="Static Resource Name" description="Name of the static resource containing the Salesforce Lightning Design System files" default="SLDS102" />
+        <design:attribute name="carouselHeader" label="Header" default="Choose a topic" />
+        <design:attribute name="baseUrl" label="Base URL" description="Base URL of the current site. If set, will use href links instead of javascript click events. This is useful for SEO." />
+</design:component>

@@ -1,0 +1,48 @@
+.THIS {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.THIS .button-navigate {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    margin: 20px 0;
+}
+
+.THIS .button-navigate-page {
+    cursor: pointer;
+    width: 1rem;
+    margin: 4px;
+}
+
+.THIS .button-navigate-svg {
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.THIS .button-navigate-svg-active {
+    fill: #54698d;
+}
+
+.THIS .disabled {
+    cursor: default;
+    opacity: .25;
+}
+
+.THIS .page-active {
+    cursor: default;
+}
+
+
+.THIS .page-active svg {
+    fill: rgb(107, 109, 112, 0.25);
+}
+
+.THIS .homepage-bannertext {
+    font-size: 1.7rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 24px;
+}

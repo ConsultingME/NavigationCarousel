@@ -1,0 +1,50 @@
+<aura:component controller="NavigationCarouselService" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+    <ltng:require scripts="{!$Resource.HammerJS}" afterScriptsLoaded="{!c.attachTouchEvents}"/>
+
+    <aura:attribute name="carouselName" type="String"/>
+    <aura:attribute name="sldsResourceName" type="String"/>
+    <aura:attribute name="sldsResourcePath" type="String"/>
+    <aura:attribute name="items" type="List"/>
+    <aura:attribute name="pages" type="List"/>
+    <aura:attribute name="currentPage" type="Object"/>
+    <aura:attribute name="pageSize" type="Integer" default="6"/>
+    <aura:attribute name="currentPageIndex" type="Integer" default="0"/>
+
+    <aura:attribute name="carouselHeader" type="String" default="Choose a topic"/>
+    <aura:attribute name="baseUrl" type="String" description="Base URL of the current site. If set, will use href links instead of javascript click events. This is useful for SEO."/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div class="slds" aura:id="navCar">
+    	<div class="homepage-bannertext slds-text-align_center">{!v.carouselHeader}</div>
+    	<br/>
+    	<br/>
+        <div class="slds-grid slds-wrap slds-grid--align-center">
+
+            <span aura:id="prevButton" onclick="{!c.prev}" class="{! 'button-navigate button-navigate-previous slds-col slds-small-size--1-of-3 slds-medium-size--1-of-8 slds-large-size--1-of-8' + if(v.currentPageIndex == 0, ' disabled', '')}">
+                <lightning:icon iconName="utility:left" size="medium" />
+            </span>
+
+            <aura:iteration items="{!v.currentPage.items}" var="item">
+                <c:NavigationCarouselItem item="{!item}"/>
+            </aura:iteration>
+
+            <span aura:id="nextButton" onclick="{!c.next}" class="{! 'button-navigate button-navigate-next slds-col slds-small-size--1-of-3 slds-medium-size--1-of-8 slds-large-size--1-of-8' + if(v.currentPageIndex == v.pages.length-1, ' disabled', '')}">
+                <lightning:icon iconName="utility:right" size="medium" />
+            </span>
+
+        </div>
+
+        <br />
+
+        <div>
+            <aura:iteration items="{!v.pages}" var="page" indexVar="idx">
+                <span onclick="{!c.goToPage}" data-index="{!idx}">
+                    <lightning:icon iconName="utility:record" size="x-small" class="{!'button-navigate-svg' + if(page.selected, ' page-active')}"/>
+                </span>
+            </aura:iteration>
+        </div> 
+    </div>
+
+</aura:component>

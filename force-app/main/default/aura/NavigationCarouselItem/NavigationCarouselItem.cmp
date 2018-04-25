@@ -1,0 +1,21 @@
+<aura:component >
+    <aura:attribute name="item" type="Object"/>
+
+    <div class="slds-col slds-small-size--1-of-3 slds-medium-size--1-of-8 slds-large-size--1-of-8">
+            <a href="{!v.item.url}" class="carouselitem" onclick="{!c.onClick}">
+                <lightning:icon iconName="{!v.item.ImagePath}" size="large" alternativeText="Indicates approval"/>
+                <br/>
+                <ui:outputtext value="{!v.item.Label}" class="item-topictext"/>
+            </a>
+        </div>
+
+    <!--
+        <div class="slds-col slds-small-size__1-of-3 slds-medium-size__1-of-8 slds-large-size__1-of-8">
+            <a href="{!v.item.url}" class="lmi-li-carouselitem">
+                <c:svgIcon svgPath="{!v.item.ImagePath}" category="" name="user" containerClass="slds-icon_container__circle lmi-li-carouselitemcontainer"/>
+                <br/>
+                <ui:outputtext value="{!v.item.Label}" class="lmi-li-topictext"/>
+            </a>
+        </div>
+    -->
+</aura:component>

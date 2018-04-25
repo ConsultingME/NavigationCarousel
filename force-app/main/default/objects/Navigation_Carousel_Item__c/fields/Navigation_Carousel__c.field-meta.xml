@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Navigation_Carousel__c</fullName>
+    <externalId>false</externalId>
+    <label>Navigation Carousel</label>
+    <referenceTo>Navigation_Carousel__c</referenceTo>
+    <relationshipLabel>Navigation Carousel Items</relationshipLabel>
+    <relationshipName>Navigation_Carousel_Items</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>
